@@ -20,7 +20,7 @@ export default function CustomerTable() {
      const fetchCustomers = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:5000/api/customer", {
+      const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/customer`, {
         params: {
           search: searchTerm,
           page: currentPage,
